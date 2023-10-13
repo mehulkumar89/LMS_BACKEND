@@ -10,3 +10,4 @@ This is the backend implementation of learning management system.
 3.cloudinary <br/>
 4.database-mongodb</br>
 5.nodemailer</br>
+6.payment gateway-razorpay
