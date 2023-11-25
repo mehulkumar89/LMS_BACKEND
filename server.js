@@ -12,7 +12,7 @@ export const razorpay=new Razorpay({
     key_id:process.env.RAZOR_PAY_API,
     key_secret:process.env.RAZOR_PAY_SECRET
 })
-app.listen(port,async()=>{
+app.listen(process.env.PORT || 3000,async()=>{
     await connectiondb()
     console.log(`server is running on ${port}`);
 })
