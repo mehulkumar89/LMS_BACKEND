@@ -83,7 +83,8 @@ if(!(await find.comparepass(password))){
 }
 const optional={
   maxAge:24*60*60*1000,
-  httpOnly:true
+  httpOnly:true,
+  secure:true
 }
 const token=find.jwtoken()
 res.cookie('token',token,optional)
