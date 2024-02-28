@@ -20,6 +20,7 @@ app.use(cookieParser())
 app.use('/api/v1/payments',paymentRouter)
 app.use('/api/v1/course',courseRouter)
 app.use('/api/v1/user',router)
+app.set("trust proxy",1)
 app.use('*',(req,res)=>{
     res.status(400).send("!opps page not found")
 })
