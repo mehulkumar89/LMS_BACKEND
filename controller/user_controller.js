@@ -216,7 +216,7 @@ const changePassword= async(req,res,next)=>{
 }
 const update= async(req,res,next)=>{
   const {fullname}=req.body
-  const {id}=req.user
+  const {id}=req.params
   const user= await user_model.findById(id)
   if(!user){
     return next(new AppError('invalid user',400))
