@@ -118,7 +118,7 @@ const logout =(req,res)=>{
 }
 
 const getprofile= async(req,res)=>{
- const {id,email}=req.user
+ const {id}=req.params
  try{
   const user=await user_model.findById(id)
   user.password=undefined
