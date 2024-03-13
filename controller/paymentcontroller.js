@@ -11,7 +11,7 @@ const getRazorpaykey = async (req, res, next) => {
     })
 }
 const buysubscription = async (req, res, next) => {
-    const { id } = req.user
+    const { id } = req.params
     const user = await User.findById(id)
     if (!user) {
         return next(new AppError('user unauthorized', 400))
@@ -42,7 +42,7 @@ const buysubscription = async (req, res, next) => {
     }
 }
 const verifySubscription = async (req, res, next) => {
-    const { id } = req.user;
+    const { id } = req.params;
     const { razorpay_payment_id, razorpay_subscription, razorpay_signature } = req.body
     const user = await User.findById(id)
     if (!user) {
