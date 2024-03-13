@@ -5,20 +5,17 @@ const router = Router()
 router
     .route('/razorpay-key')
     .get(
-        autharized,
         getRazorpaykey
         )
 
 router
-    .route('/subscribe')
+    .route('/subscribe/:id')
     .post(
-        autharized,
         buysubscription
         )
 router
-     .route('/verify') 
+     .route('/verify/:id') 
      .post(
-        autharized,
         verifySubscription
      )       
 
