@@ -13,6 +13,6 @@ router.route('/:id')
  .delete(courseDeletion)
  .post(upload.single("lecture"),addlecturebyid)
 router.route('/:id/:index') 
- .delete(autharized,isauthorized('ADMIN'),courselecturDel)
+ .delete(courselecturDel)
 
  export default router
