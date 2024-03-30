@@ -22,7 +22,7 @@ app.use('/api/v1/course',courseRouter)
 app.use('/api/v1/user',router)
 app.set("trust proxy",1)
 app.use('*',(req,res)=>{
-    res.status(400).send("!opps page not found")
+    res.send('Hello world!');
 })
 app.use(errormiddleware)
 export default app
