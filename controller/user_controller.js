@@ -51,8 +51,10 @@ const register= async(req,res,next)=>{
 
       await user.save()
       const optional={
-        maxAge:24*60*60*1000,
-        httpOnly:true
+        httpOnly: true,
+        secure: true, 
+        maxAge: 1000 * 60 * 60 * 24 * 7,  
+        path: '/' ,sameSite:'none'
       }
       const token=user.jwtoken()
       user.password=undefined
