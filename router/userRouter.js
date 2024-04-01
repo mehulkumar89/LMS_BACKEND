@@ -11,6 +11,6 @@ router.get('/me/:id',getprofile)
 router.post('/forgot-password',forgot)
 router.post('/reset-password/:payload',reset)
 router.post('/change-pass',autharized,changePassword)
-router.put('/updateProfile/:id',upload.single("avatar"),update)
+router.put('/updateProfile/:id',autharized,upload.single("avatar"),update)
 
 export default router
